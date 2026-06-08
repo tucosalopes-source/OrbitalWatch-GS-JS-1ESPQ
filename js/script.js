@@ -408,12 +408,14 @@ document.addEventListener('keydown', function (evento) {
 
   if (tecla >= '1' && tecla <= '4') {
     var botoes = document.querySelectorAll('.btn-opcao');
+    var indice = parseInt(tecla) - 1; 
     var indice = parseInt(tecla) - 1;
 
     if (botoes.length > 0 && !botoes[0].disabled && botoes[indice]) {
       botoes[indice].click();
     }
   }
+
   
   if (tecla === 'Enter') {
     var btnProxima = document.getElementById('btn-proxima');
@@ -446,4 +448,31 @@ function atualizarBarraQuiz() {
     var porcentagem  = (perguntaAtual / perguntas.length) * 100;
     fill.style.width = porcentagem + '%';
   }
+}
+
+function salvarMelhorPontuacao() {
+  var chave  = 'melhor-pontuacao-orbital';
+  var melhor = parseInt(localStorage.getItem(chave)) || 0;
+  var resultado = document.getElementById('quiz-resultado');
+  if (!resultado) return;
+
+  var recordAntigo = document.getElementById('resultado-record');
+  if (recordAntigo) recordAntigo.remove();
+
+  var recordEl = document.createElement('p');
+  recordEl.id  = 'resultado-record';
+  recordEl.style.cssText = 'text-align:center; font-size:13px; margin-bottom:16px;';
+
+  if (pontuacao > melhor) {
+    localStorage.setItem(chave, pontuacao);
+    recordEl.style.color = '#ffd700';
+    recordEl.textContent = '★ Novo recorde! Melhor pontuação: ' + pontuacao + ' / ' + perguntas.length;
+  } else {
+    recordEl.style.color = 'var(--cor-texto-secundario)';
+    recordEl.textContent = 'Seu melhor: ' + melhor + ' / ' + perguntas.length;
+  }
+
+  var btnReiniciar = resultado.querySelector('.btn-reiniciar');
+  resultado.insertBefore(recordEl, btnReiniciar);
+} 
 }
