@@ -43,3 +43,19 @@ function irParaSlide(n) {
 intervaloSlide = setInterval(function () {
   mostrarSlide(slideAtual + 1);
 }, 4000);
+
+function validarFormulario(evento) {
+  evento.preventDefault();
+
+  var nome     = document.getElementById('form-nome').value.trim();
+  var email    = document.getElementById('form-email').value.trim();
+  var assunto  = document.getElementById('form-assunto').value.trim();
+  var mensagem = document.getElementById('form-mensagem').value.trim();
+
+  var temErro = false;
+
+  document.getElementById('erro-nome').textContent     = '';
+  document.getElementById('erro-email').textContent    = '';
+  document.getElementById('erro-assunto').textContent  = '';
+  document.getElementById('erro-mensagem').textContent = '';
+}
