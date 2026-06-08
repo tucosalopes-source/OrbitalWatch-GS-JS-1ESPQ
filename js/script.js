@@ -97,3 +97,80 @@ if (formulario) {
   formulario.addEventListener('submit', validarFormulario);
 }
 
+var perguntas = [
+  {
+    pergunta: 'Qual foi o primeiro satélite artificial lançado ao espaço?',
+    opcoes: ['Explorer 1', 'Sputnik 1', 'Vostok 1', 'Luna 1'],
+    resposta: 1
+  },
+  {
+    pergunta: 'Em que ano o Sputnik 1 foi lançado?',
+    opcoes: ['1955', '1957', '1961', '1969'],
+    resposta: 1
+  },
+  {
+    pergunta: 'O que é telemetria em satélites?',
+    opcoes: [
+      'Sistema de propulsão do satélite',
+      'Coleta e transmissão de dados do satélite para a Terra',
+      'Tipo de órbita espacial',
+      'Software de navegação'
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: 'O que significa a sigla GPS?',
+    opcoes: [
+      'Global Positioning System',
+      'General Prediction Satellite',
+      'Geographic Position Service',
+      'Global Patrol System'
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: 'Qual é a principal fonte de energia dos satélites artificiais?',
+    opcoes: ['Bateria nuclear', 'Energia solar', 'Combustível fóssil', 'Energia eólica'],
+    resposta: 1
+  },
+  {
+    pergunta: 'O que é uma órbita geoestacionária?',
+    opcoes: [
+      'Órbita que passa pelos polos da Terra',
+      'Órbita onde o satélite acompanha a rotação da Terra',
+      'Órbita muito baixa, próxima à superfície',
+      'Órbita elíptica ao redor da Lua'
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: 'Quantos satélites GPS são necessários para fornecer uma localização precisa?',
+    opcoes: ['2', '3', '4', '6'],
+    resposta: 2
+  },
+  {
+    pergunta: 'O que é debris espacial (lixo espacial)?',
+    opcoes: [
+      'Asteroides próximos à Terra',
+      'Fragmentos e satélites inativos em órbita',
+      'Poeira cósmica do universo',
+      'Meteoros que entram na atmosfera'
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: 'Qual agência espacial americana é responsável por muitas missões de satélites?',
+    opcoes: ['ESA', 'INPE', 'NASA', 'JAXA'],
+    resposta: 2
+  },
+  {
+    pergunta: 'O que o OrbitalWatch monitora nos satélites?',
+    opcoes: [
+      'Tráfego aéreo',
+      'Temperatura, energia solar e comunicação dos satélites',
+      'Previsão do tempo na Terra',
+      'Atividade vulcânica'
+    ],
+    resposta: 1
+  }
+];
