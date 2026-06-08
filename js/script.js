@@ -22,3 +22,24 @@ function mostrarSlide(n) {
   slides[slideAtual].classList.add('ativo');
   pontos[slideAtual].classList.add('ativo');
 }
+function mudarSlide(direcao) {
+  mostrarSlide(slideAtual + direcao);
+
+  clearInterval(intervaloSlide);
+  intervaloSlide = setInterval(function () {
+    mostrarSlide(slideAtual + 1);
+  }, 4000);
+}
+
+function irParaSlide(n) {
+  mostrarSlide(n);
+
+  clearInterval(intervaloSlide);
+  intervaloSlide = setInterval(function () {
+    mostrarSlide(slideAtual + 1);
+  }, 4000);
+}
+
+intervaloSlide = setInterval(function () {
+  mostrarSlide(slideAtual + 1);
+}, 4000);
