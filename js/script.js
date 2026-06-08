@@ -58,4 +58,36 @@ function validarFormulario(evento) {
   document.getElementById('erro-email').textContent    = '';
   document.getElementById('erro-assunto').textContent  = '';
   document.getElementById('erro-mensagem').textContent = '';
+
+  if (nome === '') {
+    document.getElementById('erro-nome').textContent = 'Por favor, preencha o seu nome.';
+    temErro = true;
+  }
+
+  if (email === '') {
+    document.getElementById('erro-email').textContent = 'Por favor, preencha o seu e-mail.';
+    temErro = true;
+  } else if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+    document.getElementById('erro-email').textContent = 'Por favor, insira um e-mail válido.';
+    temErro = true;
+  }
+
+  if (assunto === '') {
+    document.getElementById('erro-assunto').textContent = 'Por favor, preencha o assunto.';
+    temErro = true;
+  }
+
+  if (mensagem === '') {
+    document.getElementById('erro-mensagem').textContent = 'Por favor, escreva a sua mensagem.';
+    temErro = true;
+  }
+
+  if (!temErro) {
+    document.getElementById('form-sucesso').style.display = 'block';
+    document.getElementById('form-contato').reset();
+
+    setTimeout(function () {
+      document.getElementById('form-sucesso').style.display = 'none';
+    }, 4000);
+  }
 }
