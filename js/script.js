@@ -375,3 +375,30 @@ if (slideshowContainer) {
     }, 4000);
   });
 }
+
+function atualizarStatus() {
+  var valoresStatus    = document.querySelectorAll('.valor-status');
+  var barras           = document.querySelectorAll('.barra-status .preenchimento');
+  var porcentagemAtivo = document.querySelector('.porcentagem-ativo');
+
+  if (valoresStatus.length < 3) return;
+
+  var temp    = Math.floor(Math.random() * 30) + 15; 
+  var energia = Math.floor(Math.random() * 25) + 70; 
+  var sinal   = Math.floor(Math.random() * 35) + 60; 
+  var saude   = Math.round((energia + sinal) / 2);
+
+  var tempPercent = Math.round((temp / 60) * 100);
+
+  valoresStatus[0].textContent = temp + '°C';
+  valoresStatus[1].textContent = energia + '%';
+  valoresStatus[2].textContent = sinal + '%';
+s
+  if (barras[0]) barras[0].style.width = tempPercent + '%';
+  if (barras[1]) barras[1].style.width = energia + '%';
+  if (barras[2]) barras[2].style.width = sinal + '%';
+
+  if (porcentagemAtivo) porcentagemAtivo.textContent = saude + '%';
+}
+
+setInterval(atualizarStatus, 3000);
