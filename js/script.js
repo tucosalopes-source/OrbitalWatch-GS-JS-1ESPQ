@@ -91,3 +91,9 @@ function validarFormulario(evento) {
     }, 4000);
   }
 }
+
+var formulario = document.getElementById('form-contato');
+if (formulario) {
+  formulario.addEventListener('submit', validarFormulario);
+}
+
