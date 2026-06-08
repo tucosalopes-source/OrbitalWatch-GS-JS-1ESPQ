@@ -313,3 +313,22 @@ function mudarTema(tema) {
 
   localStorage.setItem('tema-orbital', tema);
 }
+
+var temaSalvo = localStorage.getItem('tema-orbital');
+if (temaSalvo) {
+  mudarTema(temaSalvo);
+}
+
+var barraLeitura = document.createElement('div');
+barraLeitura.id  = 'barra-leitura';
+barraLeitura.style.cssText =
+  'position:fixed; top:0; left:0; width:0%; height:3px;' +
+  'background:var(--cor-acento); z-index:9999; transition:width 0.1s ease; pointer-events:none;';
+document.body.prepend(barraLeitura);
+
+// Atualiza a largura da barra conforme o usuário scrolla
+window.addEventListener('scroll', function () {
+  var totalAltura  = document.body.scrollHeight - window.innerHeight;
+  var porcentagem  = (window.scrollY / totalAltura) * 100;
+  barraLeitura.style.width = porcentagem + '%';
+});
