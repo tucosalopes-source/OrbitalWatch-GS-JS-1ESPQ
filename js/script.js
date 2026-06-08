@@ -409,12 +409,14 @@ document.addEventListener('keydown', function (evento) {
   if (tecla >= '1' && tecla <= '4') {
     var botoes = document.querySelectorAll('.btn-opcao');
     var indice = parseInt(tecla) - 1; 
+    var indice = parseInt(tecla) - 1;
 
     if (botoes.length > 0 && !botoes[0].disabled && botoes[indice]) {
       botoes[indice].click();
     }
   }
 
+  
   if (tecla === 'Enter') {
     var btnProxima = document.getElementById('btn-proxima');
     if (btnProxima && btnProxima.style.display !== 'none') {
@@ -473,3 +475,4 @@ function salvarMelhorPontuacao() {
   var btnReiniciar = resultado.querySelector('.btn-reiniciar');
   resultado.insertBefore(recordEl, btnReiniciar);
 } 
+}
