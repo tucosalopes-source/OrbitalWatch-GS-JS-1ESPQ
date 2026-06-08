@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OrbitalWatch — Vigilância Orbital em Tempo Real</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#problema">Problema</a></li>
+      <li><a href="#tecnologia">Tecnologia</a></li>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#publico">Público</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#aplicacao">Aplicação</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <!-- Imagem de fundo -->
+    <div class="hero-bg">
+      <img src="images/hero-earth.png" alt="Terra vista do espaço" />
+    </div>
+
+    <!-- Anéis -->
+    <div class="orbital-ring"></div>
+    <div class="orbital-ring-2"></div>
+
+    <!-- Conteúdo principal -->
+    <div class="hero-content">
+      <h1 class="hero-titulo">OrbitalWatch</h1>
+      <p class="hero-subtitulo">Vigilância orbital em tempo real</p>
+      <a href="#problema" class="hero-btn">Saiba mais ↓</a>
+    </div>
+
+  </section>
+
+  <!-- Problema -->
+  <section id="problema">
+    <div class="container">
+      <p class="secao-label">Seção 01</p>
+      <h2 class="secao-titulo">O problema que<br>devemos resolver</h2>
+      <div class="layout-problema">
+
+        <!-- Texto e problemas -->
+        <div class="col-esquerda">
+          <p class="secao-desc">
+            Falhas em satélites podem comprometer comunicações, coleta de
+            dados e missões espaciais. Sem monitoramento contínuo e automatizado,
+            falhas se tornam inevitáveis — e os impactos podem ser enormes,
+            gerando riscos operacionais e missões comprometidas.
+          </p>
+
+          <div class="lista-problemas">
+
+            <div class="item-problema">
+              <div class="icone-problema azul">
+                <img src="images/thermometer-icon.svg" alt="Icone de termometro"> 
+              </div>
+              <div>
+                <h4>Variações Extremas de Temperatura</h4>
+                <p>Componentes expostos a ciclos térmicos extremos têm alta chance de falha;
+                   alertas em tempo real são essenciais para mitigar danos.</p>
+              </div>
+            </div>
+
+            <div class="item-problema">
+              <div class="icone-problema amarelo">
+                <img src="images/raio-icon.svg" alt="Icone de raio"> 
+              </div>
+              <div>
+                <h4>Falhas no Sistema de Energia Solar</h4>
+                <p>Quedas de energia comprometem todos os subsistemas do satélite;
+                   o monitoramento contínuo é vital para identificar degradações.</p>
+              </div>
+            </div>
+
+            <div class="item-problema">
+              <div class="icone-problema laranja">
+               <img src="images/antenna-dish-icon.svg" alt="Icone de antena"> 
+              
+              </div>
+              <div>
+                <h4>Perda de Comunicação</h4>
+                <p>Interrupções de sinal podem tornar o satélite inoperante;
+                   detecção precoce é fundamental para a continuidade das operações.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Imagem do satélite -->
+        <div class="col-direita">
+          <img src="images/satelite.png" alt="Satélite em órbita" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnologias -->
+  <section id="tecnologia">
+    <div class="container">
+      <p class="secao-label">Seção 02</p>
+      <h2 class="secao-titulo">Stack Tecnológico</h2>
+      <p class="secao-desc">
+        Nossa solução utiliza as melhores linguagens, protocolos e
+        ferramentas para lidar com terabytes de telemetria.
+      </p>
+
+      <div class="grid-tecnologia">
+
+        <div class="card-tech">
+          <img src="images/material-icon-theme--python.svg" alt="Python" class="tech-logo">
+          <h3>PYTHON</h3>
+          <p>Linguagem principal para processamento de dados, automação, acesso a APIs de telemetria e agendamento de tarefas.</p>
+          <a href="https://www.python.org/" target="_blank" class="tech-link">VER MAIS →</a>
+        </div>
+
+        <div class="card-tech">
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+            <img src="images/html-icon.svg" alt="HTML" class="tech-logo">
+          </a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+            <img src="images/css-icon.svg" alt="CSS" class="tech-logo">
+          </a>
+          <h3>HTML / CSS</h3>
+          <p>Base da interface de visualização de dados de telemetria. Estrutura e estilização de dashboards em tempo real.</p>
+          <a href="https://developer.mozilla.org/pt-BR/" target="_blank" class="tech-link">DOCUMENTAÇÃO →</a>
+        </div>
+
+        <div class="card-tech">
+          <img src="images/javascript-icon.svg" alt="JavaScript" class="tech-logo"> 
+          <h3>JAVASCRIPT</h3>
+          <p>Responsável pela dinamicidade da interface, gráficos interativos e comunicação com o backend em tempo real.</p>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" class="tech-link">VER MAIS →</a>
+        </div>
+
+        <div class="card-tech">
+          <a href="https://www.sqlite.org/" target="_blank">
+            <img src="images/sqlite-icon.svg" alt="SQLite" class="tech-logo">
+          </a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Scripting/JSON" target="_blank">
+            <img src="images/json-icon.svg" alt="JSON" class="tech-logo">
+          </a>
+          <h3>SQLite / JSON</h3>
+          <p>Armazenamento local de dados históricos de telemetria para análise posterior e comparação de tendências.</p>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Scripting/JSON" target="_blank" class="tech-link">DOCUMENTAÇÃO →</a>
+        </div>
+
+        <div class="card-tech">
+          <img src="images/Matplotlib.svg" alt="Matplotlib" class="tech-logo">
+          <h3>MATPLOTLIB</h3>
+          <p>Geração de gráficos e visualizações dos dados de telemetria em interfaces claras, intuitivas e exportáveis.</p>
+          <a href="https://matplotlib.org/" target="_blank" class="tech-link">VER MAIS →</a>
+        </div>
+
+        <div class="card-tech">
+          <img src="images/alert-icon.svg" alt="Sistema de Alertas" class="tech-logo">
+          <h3>SISTEMA DE ALERTAS</h3>
+          <p>Motor de alertas configuráveis com limites definidos pelo usuário para notificação imediata de anomalias.</p>
+          <a href="#beneficios" class="tech-link">VER BENEFÍCIO →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Objetivos -->
+  <section id="objetivos">
+    <div class="container">
+      <p class="secao-label">Seção 03</p>
+      <h2 class="secao-titulo">Objetivos do<br>Projeto</h2>
+
+      <div class="layout-objetivos">
+
+        <!-- Lista de objetivos -->
+        <div class="col-objetivos">
+          <div class="lista-objetivos">
+
+            <div class="item-objetivo">
+              <span class="num">01</span>
+              <div>
+                <h4>Cálculo de Integridade em Tempo Real</h4>
+                <p>Processar dados da telemetria continuamente para fornecer um índice
+                   preciso de saúde do satélite atualizado a cada segundo.</p>
+              </div>
+            </div>
+
+            <div class="item-objetivo">
+              <span class="num">02</span>
+              <div>
+                <h4>Monitoramento Contínuo e Autônomo</h4>
+                <p>Automatizar toda a coleta e análise de dados, eliminando a necessidade
+                   de supervisão humana constante durante operações rotineiras.</p>
+              </div>
+            </div>
+
+            <div class="item-objetivo">
+              <span class="num">03</span>
+              <div>
+                <h4>Sistema de Alertas Automatizados</h4>
+                <p>Disparar notificações imediatas quando parâmetros críticos
+                   ultrapassarem os limites de operação seguros predefinidos.</p>
+              </div>
+            </div>
+
+            <div class="item-objetivo">
+              <span class="num">04</span>
+              <div>
+                <h4>Interface Intuitiva de Visualização</h4>
+                <p>Disponibilizar um dashboard visual claro para análise histórica
+                   e comparação de dados de missões ao longo do tempo.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Card declaração de missão -->
+        <div class="col-missao">
+          <div class="card-missao">
+            <h3>Declaração de Missão</h3>
+            <p class="missao-texto">
+              "Garantir o funcionamento de satélites com monitoramento inteligente
+              e automatizado, permitindo a tomada de decisões rápidas e precisas
+              para os operadores ao redor do mundo."
+            </p>
+
+            <div class="metricas-missao">
+              <div class="metrica">
+                <span class="valor">99,9%</span>
+                <span class="legenda">Uptime alvo</span>
+              </div>
+              <div class="metrica">
+                <span class="valor">&lt;1s</span>
+                <span class="legenda">Latência de alerta</span>
+              </div>
+              <div class="metrica">
+                <span class="valor">3+</span>
+                <span class="legenda">Satélites simultâneos</span>
+              </div>
+              <div class="metrica">
+                <span class="valor">100%</span>
+                <span class="legenda">Rastreabilidade</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Público-alvo -->
+  <section id="publico">
+    <div class="container">
+      <p class="secao-label">Seção 04</p>
+      <h2 class="secao-titulo">Quem será impactado</h2>
+      <p class="secao-desc">
+        Desenvolvido para todos os profissionais e organizações
+        que dependem de dados espaciais confiáveis.
+      </p>
+
+      <div class="grid-publico">
+
+        <div class="card-publico">
+          <img src="images/rocket-icon.png" alt="Icone de foguete" class="publico-icone">
+          <h3>Agências Espaciais</h3>
+          <p>Organizações como NASA, ESA e INPE que precisam monitorar dezenas de satélites simultaneamente.</p>
+        </div>
+
+        <div class="card-publico">
+          <img src="images/satelite.png" alt="Icone de satélite" class="publico-icone">
+          <h3>Operadores de Satélite</h3>
+          <p>Engenheiros responsáveis pela saúde do satélite, que precisam de alertas em tempo real para agir rapidamente.</p>
+        </div>
+
+        <div class="card-publico">
+          <img src="images/microscope-icon.png" alt="Icone de microscópio" class="publico-icone">
+          <h3>Pesquisadores</h3>
+          <p>Cientistas que utilizam dados de satélite para pesquisas climáticas, geológicas e oceanográficas.</p>
+        </div>
+
+        <div class="card-publico">
+          <img src="images/capelo-icon.png" alt="Icone de capelo" class="publico-icone">
+          <h3>Instituições de Ensino</h3>
+          <p>Universidades que operam CubeSats e nanosatélites em projetos educacionais e de pesquisa aplicada.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="beneficios">
+    <div class="container">
+      <p class="secao-label">Seção 05</p>
+      <h2 class="secao-titulo">Benefícios da<br>Solução</h2>
+
+      <div class="layout-beneficios">
+
+        <!-- Lista de benefícios -->
+        <div class="col-beneficios">
+          <div class="lista-beneficios">
+
+            <div class="item-beneficio">
+              <div class="icone-beneficio">
+                <img src="images/shield-icon.png" alt="Icone de escudo"> 
+              </div>
+              <div>
+                <h4>Prevenção de Falhas Catastróficas</h4>
+                <p>Detecção antecipada de anomalias reduz o risco de perda total do satélite
+                   e minimiza o impacto de incidentes técnicos.</p>
+              </div>
+            </div>
+
+            <div class="item-beneficio">
+              <div class="icone-beneficio">
+                <img src="images/clock-icon.png" alt="Icone de relógio">
+              </div>
+              <div>
+                <h4>Redução do Tempo de Resposta</h4>
+                <p>Alertas automatizados garantem ação imediata da equipe, encurtando
+                   o tempo entre a detecção e a resolução do problema.</p>
+              </div>
+            </div>
+
+            <div class="item-beneficio">
+              <div class="icone-beneficio">
+                <img src="images/moneybag-icon.png" alt="Icone de bolsa de dinheiro"> 
+              </div>
+              <div>
+                <h4>Economia Operacional</h4>
+                <p>Monitoramento autônomo reduz a necessidade de equipes dedicadas
+                   24/7, diminuindo custos operacionais significativamente.</p>
+              </div>
+            </div>
+
+            <div class="item-beneficio">
+              <div class="icone-beneficio">
+                <img src="images/bar-graph-icon.png" alt="Icone de gráfico de barras"> 
+              </div>
+              <div>
+                <h4>Aumento da Vida Útil do Satélite</h4>
+                <p>Manutenção preditiva baseada em dados prolonga a vida operacional
+                   do satélite e maximiza o retorno do investimento.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Card Status do Satélite -->
+        <div class="col-status">
+          <div class="card-status">
+            <h3>STATUS DO SATÉLITE AO VIVO</h3>
+
+            <div class="status-linha">
+              <span class="label">Temperatura Interna</span>
+              <span class="valor-status">22°C</span>
+              <div class="barra-status">
+                <div class="preenchimento verde" style="width: 45%;"></div>
+              </div>
+            </div>
+
+            <div class="status-linha">
+              <span class="label">Energia Solar</span>
+              <span class="valor-status">92%</span>
+              <div class="barra-status">
+                <div class="preenchimento" style="width: 92%;"></div>
+              </div>
+            </div>
+
+            <div class="status-linha">
+              <span class="label">Sinal de Comunicação</span>
+              <span class="valor-status">84%</span>
+              <div class="barra-status">
+                <div class="preenchimento amarelo" style="width: 84%;"></div>
+              </div>
+            </div>
+
+            <div class="status-ativo">
+              <div class="dot"></div>
+              <span class="texto-ativo">SATÉLITE ATIVO</span>
+              <span class="porcentagem-ativo">91%</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Aplicação -->
+  <section id="aplicacao">
+    <div class="container">
+      <p class="secao-label">Seção 06</p>
+      <h2 class="secao-titulo">Aplicação no Dia a Dia</h2>
+      <p class="secao-desc">
+        Como o OrbitalWatch funciona na prática, do início ao fim no
+        ciclo operacional diário.
+      </p>
+
+      <!-- Etapas -->
+      <div class="fluxo-aplicacao">
+
+        <div class="passo-fluxo">
+          <div class="passo-icone">
+            <img src="images/satellite-icon.svg" alt="Icone de satélite"> 
+          </div>
+          <h4>Coleta de Dados</h4>
+          <p>Satélite envia dados a cada 10 segundos via protocolo seguro.</p>
+        </div>
+
+        <div class="passo-fluxo">
+          <div class="passo-icone">
+            <img src="images/setting-icon.svg" alt="Icone de configurações">
+          </div>
+          <h4>Processamento</h4>
+          <p>Python processa e normaliza os dados recebidos em tempo real.</p>
+        </div>
+
+        <div class="passo-fluxo">
+          <div class="passo-icone">
+            <img src="images/numbers-blocks-icon.svg" alt="Icone de blocos de números"> 
+          </div>
+          <h4>Índice de Integridade</h4>
+          <p>Algoritmo calcula a saúde geral do satélite em porcentagem.</p>
+        </div>
+
+        <div class="passo-fluxo">
+          <div class="passo-icone">
+            <img src="images/siren-icon.svg" alt="Icone de sirene">
+          </div>
+          <h4>Alertas Automáticos</h4>
+          <p>Sistema dispara alertas configurados quando limites são excedidos.</p>
+        </div>
+
+        <div class="passo-fluxo">
+          <div class="passo-icone">
+            <img src="images/laptop-icon.svg" alt="Icone de laptop">
+          </div>
+          <h4>Dashboard ao Vivo</h4>
+          <p>Operador monitora tudo por interface gráfica intuitiva.</p>
+        </div>
+
+      </div>
+
+      <!-- Exemplos de uso -->
+      <div class="grid-usos">
+
+        <div class="card-uso">
+          <p class="uso-label">01</p>
+          <h3>Satélites Meteorológicos</h3>
+          <p>Monitoramento de satélites responsáveis por previsões climáticas
+             e alertas de fenômenos naturais extremos em tempo real.</p>
+        </div>
+
+        <div class="card-uso">
+          <p class="uso-label">02</p>
+          <h3>Sistemas GPS</h3>
+          <p>Garantia de integridade para constelações de navegação que
+             servem bilhões de usuários ao redor do globo diariamente.</p>
+        </div>
+
+        <div class="card-uso">
+          <p class="uso-label">03</p>
+          <h3>CubeSats Educacionais</h3>
+          <p>Ferramenta de aprendizado para universidades que operam
+             nanosatélites em projetos de pesquisa e formação de engenheiros.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria / Slideshow -->
+  <section id="galeria">
+    <div class="container">
+      <p class="secao-label">Seção 07</p>
+      <h2 class="secao-titulo">Galeria Orbital</h2>
+      <p class="secao-desc">Imagens que mostram o universo que o OrbitalWatch monitora.</p>
+
+      <div class="slideshow-container">
+
+        <div class="slide ativo">
+          <div class="slide-img-wrapper">
+            <img src="images/hero-earth.png" alt="A Terra vista do espaço">
+          </div>
+          <div class="slide-legenda">
+            <h3>A Terra Vista do Espaço</h3>
+            <p>Nosso planeta monitorado 24 horas por dia pelos satélites do OrbitalWatch.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-img-wrapper">
+            <img src="images/satelite.png" alt="Satélite em órbita">
+          </div>
+          <div class="slide-legenda">
+            <h3>Satélite em Órbita</h3>
+            <p>Equipamentos monitorados em tempo real para garantir máxima eficiência operacional.</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-img-wrapper destaque-icone">
+            <img src="images/rocket-icon.png" alt="Foguete de exploração espacial">
+          </div>
+          <div class="slide-legenda">
+            <h3>Exploração Espacial</h3>
+            <p>A tecnologia que impulsiona missões espaciais ao redor do mundo.</p>
+          </div>
+        </div>
+
+        <button class="btn-slide btn-anterior" onclick="mudarSlide(-1)">&#10094;</button>
+        <button class="btn-slide btn-proximo" onclick="mudarSlide(1)">&#10095;</button>
+
+        <div class="pontos-slide">
+          <span class="ponto ativo" onclick="irParaSlide(0)"></span>
+          <span class="ponto" onclick="irParaSlide(1)"></span>
+          <span class="ponto" onclick="irParaSlide(2)"></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato / Formulário -->
+  <section id="contato">
+    <div class="container">
+      <p class="secao-label">Seção 08</p>
+      <h2 class="secao-titulo">Entre em Contato</h2>
+      <p class="secao-desc">Tem interesse no OrbitalWatch? Fale com a nossa equipe.</p>
+
+      <div class="form-wrapper">
+        <form id="form-contato" novalidate>
+
+          <div class="campo-grupo">
+            <label for="form-nome">Nome completo</label>
+            <input type="text" id="form-nome" placeholder="Digite seu nome">
+            <span class="erro-campo" id="erro-nome"></span>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="form-email">E-mail</label>
+            <input type="email" id="form-email" placeholder="Digite seu e-mail">
+            <span class="erro-campo" id="erro-email"></span>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="form-assunto">Assunto</label>
+            <input type="text" id="form-assunto" placeholder="Qual é o assunto?">
+            <span class="erro-campo" id="erro-assunto"></span>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="form-mensagem">Mensagem</label>
+            <textarea id="form-mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+            <span class="erro-campo" id="erro-mensagem"></span>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+
+          <div id="form-sucesso" class="form-sucesso" style="display: none;">
+            Mensagem enviada com sucesso! Entraremos em contato em breve.
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz -->
+  <section id="quiz">
+    <div class="container">
+      <p class="secao-label">Seção 09</p>
+      <h2 class="secao-titulo">Quiz Espacial</h2>
+      <p class="secao-desc">Teste seus conhecimentos sobre satélites e exploração espacial!</p>
+
+      <div class="quiz-wrapper">
+
+        <!-- Tela inicial do quiz -->
+        <div id="quiz-inicio">
+          <p class="quiz-intro-texto">
+            São 10 perguntas sobre satélites, órbitas e monitoramento espacial.
+            Cada pergunta tem apenas uma resposta correta. Boa sorte!
+          </p>
+          <button class="btn-quiz-iniciar" onclick="iniciarQuiz()">Iniciar Quiz</button>
+        </div>
+
+        <!-- Área das perguntas -->
+        <div id="quiz-area" style="display: none;">
+          <p id="quiz-contador" class="quiz-contador"></p>
+          <p id="quiz-pergunta" class="quiz-pergunta"></p>
+          <div id="quiz-opcoes" class="quiz-opcoes"></div>
+          <p id="quiz-feedback" class="quiz-feedback"></p>
+          <button id="btn-proxima" class="btn-proxima" onclick="proximaPergunta()" style="display: none;">
+            Próxima Pergunta →
+          </button>
+        </div>
+
+        <!-- Tela de resultado -->
+        <div id="quiz-resultado" style="display: none;">
+          <h3 class="resultado-titulo">Resultado Final</h3>
+          <div class="resultado-placar">
+            <span id="resultado-pontuacao" class="resultado-numero"></span>
+            <span class="resultado-label">acertos</span>
+          </div>
+          <p class="resultado-percentual">
+            Você acertou <strong id="resultado-percentual"></strong> das perguntas
+          </p>
+          <p id="resultado-mensagem" class="resultado-mensagem"></p>
+          <button class="btn-reiniciar" onclick="reiniciarQuiz()">Jogar Novamente</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Widget de Troca de Tema -->
+  <div class="tema-widget">
+    <p class="tema-titulo">TEMA</p>
+    <button class="btn-tema ativo" data-tema="escuro" onclick="mudarTema('escuro')">
+      <span class="tema-bolinha" style="background: #00d4ff;"></span>
+      Escuro
+    </button>
+    <button class="btn-tema" data-tema="oceano" onclick="mudarTema('oceano')">
+      <span class="tema-bolinha" style="background: #00aaff;"></span>
+      Oceano
+    </button>
+    <button class="btn-tema" data-tema="aurora" onclick="mudarTema('aurora')">
+      <span class="tema-bolinha" style="background: #bb44ff;"></span>
+      Aurora
+    </button>
+  </div>
+
+ <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-layout">
+
+        <div class="footer-marca">
+          <h2>OrbitalWatch</h2>
+          <p>Sistemas de monitoramento de satélites em tempo real para uma era espacial mais segura e confiável.</p>
+        </div>
+
+        <div class="footer-integrantes">
+          <h3>Integrantes do grupo</h3>
+          <ul class="lista-integrantes">
+            <li><span class="nome">Anthony Leal</span><span class="ra">RM: 569526</span></li>
+            <li><span class="nome">Arthur de Sá</span><span class="ra">RM: 569616</span></li>
+            <li><span class="nome">Gustavo Bidin</span><span class="ra">RM: 570272</span></li>
+            <li><span class="nome">Mateus Alves Borges</span><span class="ra">RM: 571424</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="footer-copy">© 2026 OrbitalWatch — Projeto Acadêmico</p>
+    </div>
+  </footer>
+  
+<script src="js/script.js"></script>
+</body>
+</html>
