@@ -402,3 +402,48 @@ s
 }
 
 setInterval(atualizarStatus, 3000);
+
+document.addEventListener('keydown', function (evento) {
+  var tecla = evento.key;
+
+  if (tecla >= '1' && tecla <= '4') {
+    var botoes = document.querySelectorAll('.btn-opcao');
+    var indice = parseInt(tecla) - 1; 
+
+    if (botoes.length > 0 && !botoes[0].disabled && botoes[indice]) {
+      botoes[indice].click();
+    }
+  }
+
+  if (tecla === 'Enter') {
+    var btnProxima = document.getElementById('btn-proxima');
+    if (btnProxima && btnProxima.style.display !== 'none') {
+      btnProxima.click();
+    }
+  }
+});
+
+var quizArea = document.getElementById('quiz-area');
+if (quizArea) {
+  var barraQuizEl = document.createElement('div');
+  barraQuizEl.style.cssText =
+    'width:100%; height:4px; background:rgba(255,255,255,0.08);' +
+    'border-radius:2px; margin-bottom:18px; overflow:hidden;';
+
+  var fillBarraQuiz = document.createElement('div');
+  fillBarraQuiz.id  = 'barra-quiz-fill';
+  fillBarraQuiz.style.cssText =
+    'height:100%; width:0%; background:var(--cor-acento);' +
+    'border-radius:2px; transition:width 0.4s ease;';
+
+  barraQuizEl.appendChild(fillBarraQuiz);
+  quizArea.insertBefore(barraQuizEl, quizArea.firstChild);
+}
+
+function atualizarBarraQuiz() {
+  var fill = document.getElementById('barra-quiz-fill');
+  if (fill) {
+    var porcentagem  = (perguntaAtual / perguntas.length) * 100;
+    fill.style.width = porcentagem + '%';
+  }
+}
