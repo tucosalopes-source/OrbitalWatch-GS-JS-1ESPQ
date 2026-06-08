@@ -332,3 +332,27 @@ window.addEventListener('scroll', function () {
   var porcentagem  = (window.scrollY / totalAltura) * 100;
   barraLeitura.style.width = porcentagem + '%';
 });
+
+var btnTopo = document.createElement('button');
+btnTopo.innerHTML = '↑';
+btnTopo.title     = 'Voltar ao topo';
+btnTopo.style.cssText =
+  'position:fixed; bottom:110px; right:28px; width:42px; height:42px;' +
+  'border-radius:50%; background:var(--cor-card); border:1px solid var(--cor-card-borda);' +
+  'color:var(--cor-acento); font-size:18px; cursor:pointer;' +
+  'opacity:0; pointer-events:none; transition:opacity 0.3s ease; z-index:998;';
+document.body.appendChild(btnTopo);
+
+btnTopo.addEventListener('click', function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 400) {
+    btnTopo.style.opacity       = '1';
+    btnTopo.style.pointerEvents = 'auto';
+  } else {
+    btnTopo.style.opacity       = '0';
+    btnTopo.style.pointerEvents = 'none';
+  }
+});
