@@ -447,3 +447,29 @@ function atualizarBarraQuiz() {
     fill.style.width = porcentagem + '%';
   }
 }
+
+function salvarMelhorPontuacao() {
+  var chave  = 'melhor-pontuacao-orbital';
+  var melhor = parseInt(localStorage.getItem(chave)) || 0;
+  var resultado = document.getElementById('quiz-resultado');
+  if (!resultado) return;
+
+  var recordAntigo = document.getElementById('resultado-record');
+  if (recordAntigo) recordAntigo.remove();
+
+  var recordEl = document.createElement('p');
+  recordEl.id  = 'resultado-record';
+  recordEl.style.cssText = 'text-align:center; font-size:13px; margin-bottom:16px;';
+
+  if (pontuacao > melhor) {
+    localStorage.setItem(chave, pontuacao);
+    recordEl.style.color = '#ffd700';
+    recordEl.textContent = '★ Novo recorde! Melhor pontuação: ' + pontuacao + ' / ' + perguntas.length;
+  } else {
+    recordEl.style.color = 'var(--cor-texto-secundario)';
+    recordEl.textContent = 'Seu melhor: ' + melhor + ' / ' + perguntas.length;
+  }
+
+  var btnReiniciar = resultado.querySelector('.btn-reiniciar');
+  resultado.insertBefore(recordEl, btnReiniciar);
+} 
