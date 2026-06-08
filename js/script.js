@@ -356,3 +356,22 @@ window.addEventListener('scroll', function () {
     btnTopo.style.pointerEvents = 'none';
   }
 });
+
+document.addEventListener('keydown', function (evento) {
+  if (evento.key === 'ArrowLeft')  mudarSlide(-1);
+  if (evento.key === 'ArrowRight') mudarSlide(1);
+});
+
+var slideshowContainer = document.querySelector('.slideshow-container');
+if (slideshowContainer) {
+  // Mouse entrou — pausa
+  slideshowContainer.addEventListener('mouseenter', function () {
+    clearInterval(intervaloSlide);
+  });
+  // Mouse saiu — retoma
+  slideshowContainer.addEventListener('mouseleave', function () {
+    intervaloSlide = setInterval(function () {
+      mostrarSlide(slideAtual + 1);
+    }, 4000);
+  });
+}
