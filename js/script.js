@@ -174,3 +174,107 @@ var perguntas = [
     resposta: 1
   }
 ];
+
+var perguntaAtual = 0;
+var pontuacao     = 0;
+
+function mostrarPergunta() {
+  var info  = perguntas[perguntaAtual];
+  var total = perguntas.length;
+
+  document.getElementById('quiz-contador').textContent =
+    'Pergunta ' + (perguntaAtual + 1) + ' de ' + total;
+  document.getElementById('quiz-pergunta').textContent = info.pergunta;
+
+  var opcoesDiv = document.getElementById('quiz-opcoes');
+  opcoesDiv.innerHTML = '';
+
+  for (var i = 0; i < info.opcoes.length; i++) {
+    var btn = document.createElement('button');
+    btn.textContent = info.opcoes[i];
+    btn.className   = 'btn-opcao';
+    btn.setAttribute('data-indice', i);
+    btn.onclick     = verificarResposta;
+    opcoesDiv.appendChild(btn);
+  }
+
+  document.getElementById('btn-proxima').style.display = 'none';
+  document.getElementById('quiz-feedback').textContent = '';
+  document.getElementById('quiz-feedback').className   = 'quiz-feedback';
+
+  atualizarBarraQuiz(); // atualiza a barra de progresso a cada pergunta
+}
+
+function verificarResposta() {
+  var indiceEscolhido = parseInt(this.getAttribute('data-indice'));
+  var respostaCorreta = perguntas[perguntaAtual].resposta;
+
+  var botoes = document.querySelectorAll('.btn-opcao');
+  for (var i = 0; i < botoes.length; i++) {
+    botoes[i].disabled = true;
+    if (i === respostaCorreta) botoes[i].classList.add('correta');
+  }
+
+  if (indiceEscolhido === respostaCorreta) {
+    pontuacao++;
+    document.getElementById('quiz-feedback').textContent = '✓ Correto!';
+    document.getElementById('quiz-feedback').className   = 'quiz-feedback acerto';
+  } else {
+    this.classList.add('errada');
+    document.getElementById('quiz-feedback').textContent = '✗ Errado! A resposta correta está marcada em verde.';
+    document.getElementById('quiz-feedback').className   = 'quiz-feedback erro';
+  }
+
+  document.getElementById('btn-proxima').style.display = 'block';
+}
+
+function proximaPergunta() {
+  perguntaAtual++;
+  if (perguntaAtual < perguntas.length) {
+    mostrarPergunta();
+  } else {
+    mostrarResultado();
+  }
+}
+
+function mostrarResultado() {
+  document.getElementById('quiz-area').style.display      = 'none';
+  document.getElementById('quiz-resultado').style.display = 'block';
+
+  var percentual = Math.round((pontuacao / perguntas.length) * 100);
+  document.getElementById('resultado-pontuacao').textContent  = pontuacao + ' / ' + perguntas.length;
+  document.getElementById('resultado-percentual').textContent = percentual + '%';
+
+  var mensagem = '';
+  if      (percentual >= 80) mensagem = 'Parabéns! Você é um especialista em satélites!';
+  else if (percentual >= 60) mensagem = 'Bom trabalho! Você conhece bastante sobre o espaço.';
+  else if (percentual >= 40) mensagem = 'Continue estudando! O universo tem muito a ensinar.';
+  else                       mensagem = 'Não desanime! Explore o OrbitalWatch e aprenda mais.';
+
+  document.getElementById('resultado-mensagem').textContent = mensagem;
+
+  // Preenche a barra de progresso até 100% ao terminar
+  var fill = document.getElementById('barra-quiz-fill');
+  if (fill) fill.style.width = '100%';
+
+  salvarMelhorPontuacao(); // salva e mostra a melhor pontuação
+}
+
+function iniciarQuiz() {
+  document.getElementById('quiz-inicio').style.display = 'none';
+  document.getElementById('quiz-area').style.display   = 'block';
+  mostrarPergunta();
+}
+
+function reiniciarQuiz() {
+  perguntaAtual = 0;
+  pontuacao     = 0;
+
+  // Remove o elemento de recorde anterior para recriar depois
+  var recordAntigo = document.getElementById('resultado-record');
+  if (recordAntigo) recordAntigo.remove();
+
+  document.getElementById('quiz-resultado').style.display = 'none';
+  document.getElementById('quiz-area').style.display      = 'block';
+  mostrarPergunta();
+}
