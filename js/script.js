@@ -278,3 +278,38 @@ function reiniciarQuiz() {
   document.getElementById('quiz-area').style.display      = 'block';
   mostrarPergunta();
 }
+
+function mudarTema(tema) {
+  var raiz   = document.documentElement;
+  var botoes = document.querySelectorAll('.btn-tema');
+
+  for (var i = 0; i < botoes.length; i++) {
+    botoes[i].classList.remove('ativo');
+  }
+  document.querySelector('.btn-tema[data-tema="' + tema + '"]').classList.add('ativo');
+
+  if (tema === 'escuro') {
+    raiz.style.setProperty('--cor-fundo',             '#080a0f');
+    raiz.style.setProperty('--cor-fundo-secundario',  '#0d1117');
+    raiz.style.setProperty('--cor-card',              '#0f1520');
+    raiz.style.setProperty('--cor-card-borda',        '#1a2233');
+    raiz.style.setProperty('--cor-acento',            '#00d4ff');
+    raiz.style.setProperty('--cor-acento-secundario', '#0077ff');
+  } else if (tema === 'oceano') {
+    raiz.style.setProperty('--cor-fundo',             '#020c1b');
+    raiz.style.setProperty('--cor-fundo-secundario',  '#041525');
+    raiz.style.setProperty('--cor-card',              '#061a2e');
+    raiz.style.setProperty('--cor-card-borda',        '#0a2a45');
+    raiz.style.setProperty('--cor-acento',            '#00aaff');
+    raiz.style.setProperty('--cor-acento-secundario', '#0055cc');
+  } else if (tema === 'aurora') {
+    raiz.style.setProperty('--cor-fundo',             '#0a0515');
+    raiz.style.setProperty('--cor-fundo-secundario',  '#12052a');
+    raiz.style.setProperty('--cor-card',              '#150830');
+    raiz.style.setProperty('--cor-card-borda',        '#2a1050');
+    raiz.style.setProperty('--cor-acento',            '#bb44ff');
+    raiz.style.setProperty('--cor-acento-secundario', '#7700cc');
+  }
+
+  localStorage.setItem('tema-orbital', tema);
+}
