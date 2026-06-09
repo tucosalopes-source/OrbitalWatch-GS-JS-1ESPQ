@@ -475,4 +475,3 @@ function salvarMelhorPontuacao() {
   var btnReiniciar = resultado.querySelector('.btn-reiniciar');
   resultado.insertBefore(recordEl, btnReiniciar);
 } 
-}
